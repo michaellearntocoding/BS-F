@@ -5,18 +5,15 @@
   padding: 0;
   font-family: Poppins;
 }
-
 .section-title{
   font-size: 2rem;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 20px;
 }
-
 .container{
   margin: 0 10px;
 }
-
 /* Navigation Bar */
 nav{
   position: fixed;
@@ -27,13 +24,11 @@ nav{
   box-shadow: 5px -1px 12px -5px grey;
   transition: top 0.5s;
 }
-
 .container-nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 15px 15px;
-
 }
 .nav-item{
   z-index: 1;
@@ -41,6 +36,7 @@ nav{
   left: -110%;
   margin-top: 280px;
   width: 100%;
+  box-shadow: 5px -1px 12px -5px grey;
 }
 .nav-link{
   text-decoration: none;
@@ -49,7 +45,7 @@ nav{
   flex-direction: column;
   padding: 15px 0 15px 15px;
   width: 100%;
-  background-color: tan;
+  background-color: white;
 }
 /* Hamburger Menu */
 span{
@@ -60,7 +56,6 @@ span{
   margin: 3px 5px;
   border-radius: 15px;
 }
-
 /* Hamburger menu active */
 .hamburger.active .bar:nth-child(2){
   opacity: 0;
@@ -92,7 +87,7 @@ span{
   font-size: 1.5rem;
 }
 .programmer-img{
-  width: 80%;
+  width: 300px;
   margin-top: 30px;
 }
 /* Arrow animation */
@@ -121,18 +116,15 @@ span{
     100% {margin-top: 0;}
 }
 
-
 /* ABOUT */
 #about{
   background-color: #6e07f3;
   color: white;
 }
-
 .about p{
   font-size: 1.2rem;
   text-align: justify;
 }
-
 .skill{
   display: flex;
   flex-direction: column;
@@ -158,8 +150,6 @@ span{
   padding: 15px;
   border-radius: 100%;
 }
-
-
 /* PROJECTS */
 .projects{
   display: flex;
@@ -215,5 +205,83 @@ span{
   padding: 20px 0;
   text-align: center;
   color: white;
+}
 
+
+/* Responsive */
+@media only screen and (min-width: 700px) {
+  /* Navigation Bar */
+  .hamburger{
+    display: none;
+  }
+  .container-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+  }
+  .nav-item{
+    position: static;
+    margin-top: 0;
+    width: auto;
+    display: flex;
+    box-shadow: none;
+  }
+  .nav-link{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    width: auto;
+    background-color: white;
+  }
+  .container{
+    margin: 0 auto;
+    width: 70%;
+  }
+  /* ABOUT */
+  .skill-item{
+    width: 320px;
+  }
+  /* PROJECTS */
+  .project-item{
+    width: 400px;
+  }
+  /* CONTACT */
+  .contact-form{
+    width: 500px;
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .container-nav{
+    padding: 15px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .skill{
+    flex-direction: row;
+  }
+  .skill-item{
+    height: 450px;
+  }
+  .projects{
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+    margin: 20px auto;
+  }
+  .container{
+    text-align: center;
+    width: 700px;
+  }
+  /* ABOUT */
+  .skill{
+    display: flex;
+    flex-direction: row;
+    margin: 50px auto 0 auto;
+    width: 1200px;
+  }
 }

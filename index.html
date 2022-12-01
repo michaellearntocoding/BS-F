@@ -1,222 +1,113 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Furniture Marketplace</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MichaelWijaya - Web Dev</title>
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- CSS -->
-        <link rel="stylesheet" href="style.css">
-        <!-- Bootstrap Link -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
-
-
     <body>
         <!-- Navigation Bar -->
-        <nav class="navbar navbar-expand-lg bg-light fixed-top" style="padding: 20px 40px;"">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Furniture</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  <a class="nav-link" href="#products">Products</a>
-                  <a class="nav-link" href="#aboutus">About Us</a>
-                  <a class="nav-link" href="#findus">Find Us</a>
-                </div>
-              </div>
+        <nav id="navbar">
+          <div class="container-nav">
+            <h1 class="nav-brand">MichaelWijaya._</h1>
+            <div class="nav-item">
+              <a class="nav-link" href="#home">HOME</a>
+              <a class="nav-link" href="#about">ABOUT</a>
+              <a class="nav-link" href="#projects">PROJECTS</a>
+              <a class="nav-link" href="#contact">CONTACT ME</a>
             </div>
+            <div class="hamburger" onClick="hamburgerMenu()">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+
         </nav>
-        <!-- HOME -->
-        <div class="home">
-            <div class="container-carousel">
-                <!-- Carousel -->
-            <div id="carouselExampleInterval" class="container-carousel carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="img/car-1.jpg" class="d-block w-100 carousel-img" alt="...">
-                    <p class="carousel-1-p">Make room<br>for better<br>living</p>
-                  </div>
-                  <div class="carousel-item" >
-                    <img src="img/car-2.jpg" class="d-block w-100 carousel-img" alt="...">
-                    <p class="carousel-2-p">Find<br>your dream<br>furniture</p>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="img/car-3.jpg" class="d-block w-100 carousel-img" alt="...">
-                    <p class="carousel-3-p">Shop Now</p>
-                  </div>
-                </div>
-            <!-- Carosuel Button Next & Prev -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-            
-        </div>
-        <!-- Products -->
-        <div id="products">
-            <h1>Our new products</h1>
-            <div class="product-item">
-                <div class="card col-md-4" style="width: 18rem;">
-                    <img src="img/gcey.jpg" class="card-img-top card-img" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Gcey</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Buy Now!</a>
-                    </div>
-                  </div>
-                  <div class="card col-md-4" style="width: 18rem;">
-                    <img src="img/grex.jpg" class="card-img-top card-img" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Grex</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Buy Now!</a>
-                    </div>
-                  </div>
-                  <div class="card col-md-4" style="width: 18rem;">
-                    <img src="img/Takz.jpg" class="card-img-top card-img" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Takz</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Buy Now!</a>
-                    </div>
-                  </div>
-                  <div class="card col-md-4" style="width: 18rem;">
-                    <img src="img/Sofc.jpg" class="card-img-top card-img" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Sofc</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Buy Now!</a>
-                    </div>
-                  </div>
-            </div>
-            <h1>Our Collection</h1>
-            <div class="collection">
-                <div class="collection-row">
-                    <div class="card col-md-4" style="width: 18rem;">
-                        <img src="img/modex.jpg" class="card-img-top card-img" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Modex</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Buy Now!</a>
-                        </div>
-                      </div>
-                      <div class="card col-md-4" style="width: 18rem;">
-                        <img src="img/Brnde.jpg" class="card-img-top card-img" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Brnde</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Buy Now!</a>
-                        </div>
-                      </div>
-                      <div class="card col-md-4" style="width: 18rem;">
-                        <img src="img/Sofc.jpg" class="card-img-top card-img" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Grex</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Buy Now!</a>
-                        </div>
-                      </div>
-                      <div class="card col-md-4" style="width: 18rem;">
-                        <img src="img/Sofc.jpg" class="card-img-top card-img" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Grex</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Buy Now!</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="collection-row">
-                    <div class="card col-md-4" style="width: 18rem;">
-                        <img src="img/Sofc.jpg" class="card-img-top card-img" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Grex</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Buy Now!</a>
-                        </div>
-                      </div>
-                      <div class="card col-md-4" style="width: 18rem;">
-                        <img src="img/Sofc.jpg" class="card-img-top card-img" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Grex</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Buy Now!</a>
-                        </div>
-                      </div>
-                      <div class="card col-md-4" style="width: 18rem;">
-                        <img src="img/Takz.jpg" class="card-img-top card-img" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Takz</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Buy Now!</a>
-                        </div>
-                      </div>
-                      <div class="card col-md-4" style="width: 18rem;">
-                        <img src="img/Whiz.jpg" class="card-img-top card-img" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Whiz</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Buy Now!</a>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </div>
-        <!-- About Us -->
-        <div id="aboutus">
-            <h1>About Us</h1>
-            <div class="row">
-                <div class="column">
-                    <img src="img/aboutus1.jpg">
-                    <img src="img/aboutus2.jpg">
-                    <img src="img/aboutus3.jpg">
-                    <img src="img/aboutus4.jpg">
-                </div>
-                <div class="column">
-                    <img src="img/aboutus3.jpg">
-                    <img src="img/aboutus1.jpg">
-                    <img src="img/aboutus4.jpg">
-                    <img src="img/aboutus2.jpg">
-                </div>
-                <div class="column">
-                    <img src="img/aboutus2.jpg">
-                    <img src="img/aboutus4.jpg">
-                    <img src="img/aboutus1.jpg">
-                    <img src="img/aboutus3.jpg">
-                </div>
-            </div>
-            <p class="aboutus-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tortor ipsum, ullamcorper et enim ut, convallis porta sem. Nam nec odio gravida, consectetur risus aliquam, facilisis est. Suspendisse mauris leo, cursus nec sem sit amet, condimentum commodo augue. Suspendisse sit amet tortor non tellus consectetur pretium sed sit amet sapien. Nam in mi augue. Proin eu lectus a nisl mattis pharetra id iaculis ligula. Fusce auctor consectetur auctor. Duis molestie tellus est, in euismod eros consequat sed.
 
-                Quisque imperdiet lorem ut mauris maximus, eu tempus risus suscipit. In hac habitasse platea dictumst. Nunc at ex at massa scelerisque egestas non at eros. Proin porttitor malesuada leo non varius. Aliquam erat volutpat. Nullam pretium efficitur libero, bibendum ornare mauris efficitur et. Quisque sed pretium neque. Aliquam vitae magna elementum, ultricies orci nec, egestas ex. Aenean nec bibendum turpis, in mattis dolor. Nulla et risus nec enim condimentum dignissim ornare quis lectus. Duis eu ullamcorper eros. Cras condimentum dignissim massa fringilla elementum. Mauris tristique, elit sed condimentum aliquam, nisl sapien maximus nulla, sit amet pretium nulla libero vel nulla. Integer sodales consequat rutrum.
-                
-                Ut condimentum urna euismod erat aliquam faucibus. Morbi justo lectus, pellentesque a viverra sed, molestie et risus. Maecenas quis nunc bibendum, eleifend odio quis, accumsan elit. Nunc facilisis, massa ut volutpat mollis, ligula ex consequat risus, non consectetur ante nisi non augue. Quisque ex nisi, luctus a risus aliquet, mattis faucibus velit. Praesent malesuada tincidunt ante. Nunc eleifend urna est, vitae porttitor quam convallis eu. Nullam rutrum eros ut ante volutpat, sit amet condimentum ipsum convallis. Aenean dictum enim id leo finibus dapibus. Cras non lorem a justo auctor accumsan. Mauris dictum consequat nisl ut dignissim. Aliquam erat volutpat. Curabitur egestas ipsum scelerisque elit placerat, vulputate tincidunt nisi lobortis. Donec eleifend egestas ante. Maecenas egestas turpis eu tellus posuere, eu maximus turpis tempor.</p>
-        </div>
+        <!-- HOME PAGE -->
+        <section id="home">
+          <div class="home">
+            <h1>Hi, there...<br>I'm Michael</h1>
+            <p>a Front-End Web Developer</p>
+            <img class="programmer-img" src="images/vector-programmer.jpg" alt="images-programmer">
+          </div>
+          <div class="arrow-down">
+            <span class="arrow"></span>
+            <span class="arrow"></span>
+          </div>
+        </section>
 
-        <!-- Find Us -->
-        <div id="findus">
-            <h1>Find Us</h1>
-            <div class="findus-location">
-                <img class="map-img" src="img/findusmap.png" alt="">
-                <p class="findus-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tortor ipsum, ullamcorper et enim ut, convallis porta sem. Nam nec odio gravida, consectetur risus aliquam, facilisis est. Suspendisse mauris leo, cursus nec sem sit amet, condimentum commodo augue. Suspendisse sit amet tortor non tellus consectetur pretium sed sit amet sapien. Nam in mi augue. Proin eu lectus a nisl mattis pharetra id iaculis ligula. Fusce auctor consectetur auctor. Duis molestie tellus est, in euismod eros consequat sed.</p>
+        <!-- ABOUT -->
+        <section id="about">
+          <div class="container about">
+            <h1 class="section-title">ABOUT ME</h1>
+            <p class="">I started my journey as web developer about a year ago, I've learned many thing as web developer by my self. I'm quietly confident, natural curious and perpetually working on improving my chops one design problem at a time.</p>
+          </div>
+          <div class="skill">
+            <div class="skill-item">
+              <i class='icon bx bx-code-block'></i>
+              <h1>Front-End Developer</h1>
+              <p>I like to code things from scratch and enjoy bringing ideas to life in the browser.</p>
+              <p>Languages I speak:<br>HTML, CSS, JavaScript and more.</p>
+              <p>Dev Tools:<br>Atom<br>Visual Studio code<br>Bootstrap<br>Github<br>etc</p>
             </div>
-        </div>
+            <div class="skill-item">
+              <i class='icon bx bxs-cog' ></i>
+              <h1>Mechanical Design</h1>
+              <p>What I like about mechanical design is having a problem to solve and working out the most efficient way to solve it.</p>
+              <p>Design Tools:<br>Autodesk Autocad<br>Autodesk Inventor<br>3D Printing</p>
+            </div>
+            <div class="skill-item">
+              <i class='icon bx bx-wifi' ></i>
+              <h1>IoT</h1>
+              <p>I like the first idea behind IoT is to enable things to be connected anytime, anyplace with anything or anyone.</p>
+              <p>Components I use:<br>Arduino<br>ESP32<br>Raspberry Pi</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+          <div class="container">
+            <h1 class="section-title">MY PROJECTS</h1>
+            <p>Here are few past design projects I've worked on. Want to see more? <a>Email me.</a></p>
+          </div>
+          <div class="projects">
+            <a class="project-item" href="#">E-commerce website</a>
+            <a class="project-item" href="#">Movies website</a>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+          <h1 class="section-title">REACH OUT TO ME</h1>
+          <form class="contact-form" action="index.html" method="post">
+            <label for="">Name:</label>
+            <input class="input-box" type="text" name="" value="" placeholder="Your name">
+            <label for="">Email:</label>
+            <input class="input-box" type="email" name="" value="" placeholder="email">
+            <label for="">No HP:</label>
+            <input class="input-box" type="number" name="" value="" placeholder="Your phone number">
+            <label for="">Message:</label>
+            <input class="input-box message" type="text" name="" value="" placeholder="Write your message here.">
+            <input class="submit-btn" type="submit" name="" value="Submit">
+          </form>
+        </section>
+
+
         <!-- Footer -->
-        <div id="footer">
-            <p>© 2022 Michael. All rights reserved.</p>
-        </div>
+        <section id="footer">
+          <div class="footer">
+            <p>Living, learning & leveling up one day at a time.</p>
+            <p>©2022 Michael Wijaya</p>
+          </div>
+        </section>
 
-
-
-        <!-- JavaScript Bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
     </body>
-
 </html>

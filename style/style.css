@@ -170,6 +170,10 @@ span{
 
 
 /* Contact */
+.contact-title{
+  margin: 80px auto 0;
+  width: 90%;
+}
 .contact-form{
   display: flex;
   flex-direction: column;
@@ -186,13 +190,24 @@ span{
 }
 .message{
   height: 120px;
-  word-wrap: break-word;
 }
 .submit-btn{
-  width: 100px;
-  height: 30px;
+  width: 140px;
+  height: 40px;
   margin-top: 30px;
   margin-bottom: 30px;
+  background-color: blue;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow .3s;
+}
+.submit-btn:hover{
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+.close-icon{
+  font-size: 3rem;
 }
 
 /* Footer */
@@ -253,6 +268,9 @@ span{
   .contact-form{
     width: 500px;
   }
+  .contact-title{
+    width: 70%;
+  }
 }
 
 @media only screen and (min-width: 1200px){
@@ -283,5 +301,9 @@ span{
     flex-direction: row;
     margin: 50px auto 0 auto;
     width: 1200px;
+  }
+  /* CONTACT */
+  .contact-title{
+    width: 60%;
   }
 }
